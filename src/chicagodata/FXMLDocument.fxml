@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="511.0" prefWidth="633.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="chicagodata.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <BarChart fx:id="chart" layoutX="129.0" layoutY="136.0" prefHeight="306.0" prefWidth="379.0">
+      <xAxis>
+        <CategoryAxis side="BOTTOM" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis side="LEFT" />
+      </yAxis>
+    </BarChart>
+    <MenuBar blendMode="EXCLUSION" depthTest="ENABLE" focusTraversable="false" layoutX="275.0" layoutY="37.0" opacity="0.65">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleCloseButton" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <Slider id="minSlider" fx:id="min" layoutX="91.0" layoutY="68.0" majorTickUnit="2.0" max="21.0" onMouseReleased="#onMouseReleased" showTickLabels="true" showTickMarks="true" />
+    <Slider fx:id="max" layoutX="407.0" layoutY="68.0" majorTickUnit="2.0" max="21.0" onMouseReleased="#onMouseReleased" showTickLabels="true" showTickMarks="true" />
+    <Label fx:id="minimumLabel" layoutX="119.0" layoutY="35.0" prefWidth="83.0" text="Minimum">
+      <font>
+        <Font name="Arial Black" size="15.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="Menu" layoutX="301.0" layoutY="14.0" text="Menu" />
+    <Label fx:id="maximumLabel" font="$x1" layoutX="436.0" layoutY="37.0" prefWidth="83.0" text="Maximum" />
+    <Label fx:id="yAxis" layoutX="72.0" layoutY="164.0" prefHeight="24.0" prefWidth="95.0" text="Capita (dollars)" />
+    <Label fx:id="xAxis" layoutX="277.0" layoutY="469.0" text="Neighborhoods" />
+    <TextField fx:id="textfield" layoutX="249.0" layoutY="87.0" onKeyReleased="#onSearch" prefWidth="140.0" text="" />
+    <Label layoutX="303.0" layoutY="68.0" text="Filter">
+      <font>
+        <Font size="13.0" />
+      </font>
+    </Label>
+  </children>
+</AnchorPane>
